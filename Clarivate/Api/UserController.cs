@@ -14,10 +14,6 @@ namespace Clarivate.Api
         {
             _randomUserService = randomUserService;
         }
-        public string GetString()
-        {
-            return "hello world";
-        }
 
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserModel userModel)
