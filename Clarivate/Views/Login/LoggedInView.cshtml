@@ -1,0 +1,31 @@
+﻿@using Clarivate.Models.Entity
+@model Result
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@Model.name.title. @Model.name.first @Model.name.last</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="@Model.picture.large" alt="Profile Picture" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Gender:</strong> @Model.gender</li>
+                                <li class="list-group-item"><strong>Email:</strong> @Model.email</li>
+                                <li class="list-group-item"><strong>Phone:</strong> @Model.phone</li>
+                                <li class="list-group-item"><strong>Cell:</strong> @Model.cell</li>
+                                <li class="list-group-item"><strong>Registered:</strong> @Model.registered.date.ToShortDateString()</li>
+                                <li class="list-group-item"><strong>Location:</strong> @Model.location.city, @Model.location.state, @Model.location.country</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
